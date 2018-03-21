@@ -8,6 +8,7 @@
     <title>Survey</title>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
 
@@ -26,24 +27,134 @@
         <h4>Link to photo (Required)</h4>
         <input type="text" id="photo" class="form-control" required>
         <hr>
-
-        <h4>Question one</h4>
-        <nav aria-label="Page navigation">
-                <ul class="pagination" id="question1">
-                  <li><a href="#">1</a></li>
-                  <li><a href="#">2</a></li>
-                  <li><a href="#">3</a></li>
-                  <li><a href="#">4</a></li>
-                  <li><a href="#">5</a></li>
-                  
-                </ul>
-              </nav>
-
-
-       
-        
+    <div class="row">
+        <div class="col-md-4 question">
+        <div class="header"><h4>Question 1</h4></div>
+            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+                <select class="question-answer" id="q1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+        </div>
+        <div class="col-md-4 question">
+        <div class="header"><h4>Question 2</h4></div>
+            <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
+                <select class="question-answer" id="q2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+        </div>
+        <div class="col-md-4 question"> 
+            <div class="header"><h4>Question 3</h4></div>
+            <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+                <select class="question-answer" id="q3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 question">
+                <div class="header"><h4>Question 4</h4></div>
+            <h6>You rarely do something just out of sheer curiosity.</h6>
+            <select class="question-answer" id="q4">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="col-md-4 question">
+                <div class="header"><h4>Question 5</h4></div>
+            <h6>People can rarely upset you.</h6>
+            <select class="question-answer" id="q5">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="col-md-4 question">
+                <div class="header"><h4>Question 6</h4></div>
+            <h6>It is often difficult for you to relate to other people’s feelings.</h6>
+            <select class="question-answer" id="q6">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4 question">
+                <div class="header"><h4>Question 7</h4></div>
+            <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+            <select class="question-answer" id="q7">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="col-md-4 question">
+                <div class="header"><h4>Question 8</h4></div>
+            <h6>You rarely get carried away by fantasies and ideas.</h6>
+            <select class="question-answer" id="q8">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div class="col-md-4 question">
+                <div class="header"><h4>Question 9</h4></div>
+            <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6>
+            <select class="question-answer" id="q9">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+    </div>              
+                    
+                      
+       <button class="btn btn-default" type="submit">Button</button>
     </div>
 
 </body>
+<script>
+    
+    $(".btn").on("click", function() {
+        event.preventDefault(); 
+        var newUser = {
+            name: $("#name").val(),
+            photo: $("#photo").val(),
+            score: [$("#q1").val(),$("#q2").val(), $("#q3").val(),$("#q4").val(),$("#q5").val(),$("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+        }
+        console.log(newUser);
+        $.post("/api/friends", newUser)
+        .then(function(data){
+            console.log(data); 
+            alert("you have been added"); 
+        })
+    
+     });
+</script>
 
 </html>

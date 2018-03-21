@@ -14,35 +14,9 @@ app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);
   });
 
+require("./routing/htmlRoutes.js")(app); 
+require("./routing/apiRoutes.js")(app); 
 
-
-app.get("/", function (req, res){
-    res.sendFile(path.join(__dirname, "public/home.html"))
-})
-
-//get toute to servey
-app.get("/survey", function (req, res) {
-    res.sendFile(path.join(__dirname, "public/survey.html"))
-  }); 
-
-app.get("/api/friends", function(req, res){
-    return res.json(dbFriends);
-  }); 
-
-app.post("/api/friends", function (req, res){
-    var data = req.body
-    dbFriends.push(data);
-    res.end(); 
-    //return match :) 
-})
-
-var dbFriends = [
-    {
-        name: "Fredrik", 
-        lastname: "gustafson"
-    }, 
-    {
-        name: "niklas", 
-        lastname: "Gustafson"
-    }
-]
+app.get("/style.css", function(req, res){
+	res.sendFile(__dirname + "/public/style.css");
+});

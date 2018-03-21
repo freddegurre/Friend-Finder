@@ -1,0 +1,15 @@
+.question {
+    max-width: 32%;
+    margin: 5px; 
+    box-shadow: 5px 5px 5px #0000001a;
+}
+.header {
+    background: lemonchiffon; 
+    padding: 10px;
+}
+.col-md-4{
+    padding: 0; 
+}
+h4{
+    margin: 0; 
+}
