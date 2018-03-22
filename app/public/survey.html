@@ -27,121 +27,162 @@
         <h4>Link to photo (Required)</h4>
         <input type="text" id="photo" class="form-control" required>
         <hr>
-    <div class="row">
-        <div class="col-md-4 question">
-        <div class="header"><h4>Question 1</h4></div>
-            <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+        <div class="row">
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 1</h4>
+                </div>
+                <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
                 <select class="question-answer" id="q1">
-                    <option value="1">1</option>
+                    <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Agree)</option>
                 </select>
-        </div>
-        <div class="col-md-4 question">
-        <div class="header"><h4>Question 2</h4></div>
-            <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
+            </div>
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 2</h4>
+                </div>
+                <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
                 <select class="question-answer" id="q2">
-                    <option value="1">1</option>
+                    <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Agree)</option>
                 </select>
-        </div>
-        <div class="col-md-4 question"> 
-            <div class="header"><h4>Question 3</h4></div>
-            <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+            </div>
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 3</h4>
+                </div>
+                <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
                 <select class="question-answer" id="q3">
-                    <option value="1">1</option>
+                    <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
                     <option value="4">4</option>
-                    <option value="5">5</option>
+                    <option value="5">5 (Agree)</option>
                 </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 4</h4>
+                </div>
+                <h6>You rarely do something just out of sheer curiosity.</h6>
+                <select class="question-answer" id="q4">
+                    <option value="1">1 (Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Agree)</option>
+                </select>
+            </div>
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 5</h4>
+                </div>
+                <h6>People can rarely upset you.</h6>
+                <select class="question-answer" id="q5">
+                    <option value="1">1 (Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Agree)</option>
+                </select>
+            </div>
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 6</h4>
+                </div>
+                <h6>It is often difficult for you to relate to other people’s feelings.</h6>
+                <select class="question-answer" id="q6">
+                    <option value="1">1 (Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Agree)</option>
+                </select>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 7</h4>
+                </div>
+                <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+                <select class="question-answer" id="q7">
+                    <option value="1">1 (Disagree)</option>
+                    <option value="2">2 </option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Agree)</option>
+                </select>
+            </div>
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 8</h4>
+                </div>
+                <h6>You rarely get carried away by fantasies and ideas.</h6>
+                <select class="question-answer" id="q8">
+                    <option value="1">1 (Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Agree)</option>
+                </select>
+            </div>
+            <div class="col-md-4 question">
+                <div class="header">
+                    <h4>Question 9</h4>
+                </div>
+                <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or
+                    not.
+                </h6>
+                <select class="question-answer" id="q9">
+                    <option value="1">1 (Disagree)</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5 (Agree)</option>
+                </select>
+            </div>
+        </div>
+
+
+        <button class="btn btn-default" type="submit" id="submit">Find New Friend!</button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Congratulations you have a Match!</h4>
+                </div>
+                <div class="modal-body">
+                    <h3 id="person"></h3>
+                    <img id="personImg" src=a lt="">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="row">
-        <div class="col-md-4 question">
-                <div class="header"><h4>Question 4</h4></div>
-            <h6>You rarely do something just out of sheer curiosity.</h6>
-            <select class="question-answer" id="q4">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="col-md-4 question">
-                <div class="header"><h4>Question 5</h4></div>
-            <h6>People can rarely upset you.</h6>
-            <select class="question-answer" id="q5">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="col-md-4 question">
-                <div class="header"><h4>Question 6</h4></div>
-            <h6>It is often difficult for you to relate to other people’s feelings.</h6>
-            <select class="question-answer" id="q6">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col-md-4 question">
-                <div class="header"><h4>Question 7</h4></div>
-            <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
-            <select class="question-answer" id="q7">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="col-md-4 question">
-                <div class="header"><h4>Question 8</h4></div>
-            <h6>You rarely get carried away by fantasies and ideas.</h6>
-            <select class="question-answer" id="q8">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-        <div class="col-md-4 question">
-                <div class="header"><h4>Question 9</h4></div>
-            <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h6>
-            <select class="question-answer" id="q9">
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-            </select>
-        </div>
-    </div>              
-                    
-                      
-       <button class="btn btn-default" type="submit">Button</button>
-    </div>
+
 
 </body>
 <script>
-    
-    $(".btn").on("click", function() {
-        event.preventDefault(); 
+
+    $("#submit").on("click", function () {
+        event.preventDefault();
         var newUser = {
             name: $("#name").val(),
             photo: $("#photo").val(),
@@ -159,12 +200,12 @@
         }
         console.log(newUser);
         $.post("/api/friends", newUser)
-        .then(function(data){
-            console.log(data); 
-            alert("you have been added"); 
-        })
-    
-     });
+            .then(function (data) {
+                $("#person").text(data.name);
+                $("#personImg").attr("src", data.photo);
+                $("#myModal").modal();
+            })
+    });
 </script>
 
 </html>
