@@ -1,19 +1,47 @@
+body{
+    background: rgb(31,51,80);
+    background: linear-gradient(90deg, rgba(31,51,80,1) 0%, rgba(147,183,190,1) 54%);
+}
+
 .question {
+    margin: 8px;
     max-width: 32%;
     margin: 5px; 
-    box-shadow: 5px 5px 5px #0000001a;
+    box-shadow: 5px -5px 5px #00000034;
 }
 .header {
-    background: lemonchiffon; 
+    background:#93B7BE; 
     padding: 10px;
 }
 .col-md-4{
+    
     padding: 0; 
     height: 200px;
+    background-color:#F1FFFA; 
 }
 h4{
     margin: 0; 
 }
 #personImg {
     max-width: 550px;
+}
+.form-control{
+    margin-bottom: 20px;
+}
+p {
+    font-size: 14px; 
+    line-height: 30px;
+    margin: 20px;  
+}
+.question-answer{
+    margin-left: 19px;
+  
+}
+#submit {
+    margin-top: 10px;
+    margin-bottom: 5px; 
+    background:#F1FFFA; 
+}
+.form-control{
+    box-shadow: 3px -3px 3px #00000034;
 }

@@ -22,17 +22,15 @@
         <hr>
 
         <h3>About you</h3>
-        <h4>Name (Required)</h4>
-        <input type="text" id="name" class="form-control" required>
-        <h4>Link to photo (Required)</h4>
-        <input type="text" id="photo" class="form-control" required>
+        <input type="text" id="name" class="form-control" placeholder="Name (Required)">
+        <input type="text" id="photo" class="form-control" placeholder="URL link to Photo">
         <hr>
         <div class="row">
             <div class="col-md-4 question">
                 <div class="header">
                     <h4>Question 1</h4>
                 </div>
-                <h6>Your mind is always buzzing with unexplored ideas and plans.</h6>
+                <p>Your mind is always buzzing with unexplored ideas and plans.</p>
                 <select class="question-answer" id="q1">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -45,7 +43,7 @@
                 <div class="header">
                     <h4>Question 2</h4>
                 </div>
-                <h6>Generally speaking, you rely more on your experience than your imagination.</h6>
+                <p>Generally speaking, you rely more on your experience than your imagination.</p>
                 <select class="question-answer" id="q2">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -58,7 +56,7 @@
                 <div class="header">
                     <h4>Question 3</h4>
                 </div>
-                <h6>You find it easy to stay relaxed and focused even when there is some pressure.</h6>
+                <p>You find it easy to stay relaxed and focused even when there is some pressure.</p>
                 <select class="question-answer" id="q3">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -73,7 +71,7 @@
                 <div class="header">
                     <h4>Question 4</h4>
                 </div>
-                <h6>You rarely do something just out of sheer curiosity.</h6>
+                <p>You rarely do something just out of sheer curiosity.</p>
                 <select class="question-answer" id="q4">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -86,7 +84,7 @@
                 <div class="header">
                     <h4>Question 5</h4>
                 </div>
-                <h6>People can rarely upset you.</h6>
+                <p>People can rarely upset you.</p>
                 <select class="question-answer" id="q5">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -99,7 +97,7 @@
                 <div class="header">
                     <h4>Question 6</h4>
                 </div>
-                <h6>It is often difficult for you to relate to other people’s feelings.</h6>
+                <p>It is often difficult for you to relate to other people’s feelings.</p>
                 <select class="question-answer" id="q6">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -114,7 +112,7 @@
                 <div class="header">
                     <h4>Question 7</h4>
                 </div>
-                <h6>In a discussion, truth should be more important than people’s sensitivities.</h6>
+                <p>In a discussion, truth should be more important than people’s sensitivities.</p>
                 <select class="question-answer" id="q7">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2 </option>
@@ -127,7 +125,7 @@
                 <div class="header">
                     <h4>Question 8</h4>
                 </div>
-                <h6>You rarely get carried away by fantasies and ideas.</h6>
+                <p>You rarely get carried away by fantasies and ideas.</p>
                 <select class="question-answer" id="q8">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -140,9 +138,9 @@
                 <div class="header">
                     <h4>Question 9</h4>
                 </div>
-                <h6>You think that everyone’s views should be respected regardless of whether they are supported by facts or
+                <p>You think that everyone’s views should be respected regardless of whether they are supported by facts or
                     not.
-                </h6>
+                </p>
                 <select class="question-answer" id="q9">
                     <option value="1">1 (Disagree)</option>
                     <option value="2">2</option>
@@ -174,15 +172,30 @@
                 </div>
             </div>
 
-        </div>
-    </div>
+        </div> 
 
+    </div>
+    <footer class="footer">
+            <div class="container">
+                <p>
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="##">GitHub Repo</a>
+                </p>
+            </div>
+    </footer>
+  
 
 </body>
 <script>
 
+
     $("#submit").on("click", function () {
         event.preventDefault();
+        if ($("#name").val() === "" ||$("#photo").val() === "" ){
+            alert("Missing mandatory fields"); 
+        }
+        else {
+
         var newUser = {
             name: $("#name").val(),
             photo: $("#photo").val(),
@@ -205,6 +218,7 @@
                 $("#personImg").attr("src", data.photo);
                 $("#myModal").modal();
             })
+        }
     });
 </script>
 
